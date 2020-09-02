@@ -23,7 +23,10 @@ const Counter = () => {
 
   return (
     <div>
-      <CounterControl />
+      <CounterControl name='increment' clicked={() => counterChangedHandler('inc')}/>
+      <CounterControl name='decrement' clicked={() => counterChangedHandler('dec')}/>
+      <CounterControl name='addition' clicked={() => counterChangedHandler('add', 10)}/>
+      <CounterControl name='subtraction' clicked={() => counterChangedHandler('sub', 7)}/>
       <CounterOutput value={counter} />
     </div>
   );
